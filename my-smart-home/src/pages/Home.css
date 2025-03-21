@@ -1,0 +1,192 @@
+/* 🌟 BODY CHÍNH */
+/* 🌟 MAIN CONTENT - CHỈNH LẠI ĐỂ HIỂN THỊ NÚT */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* ✅ Giúp nội dung hiển thị từ trên xuống */
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    background: #fafafa;
+}
+
+/*NÚT ĐĂNG NHẬP - SỬA LỖI BỊ ẨN */
+.login-btn {
+    display: inline-block; /* ✅ Đảm bảo nút hiển thị */
+    background: #007bff;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 25px; /* ✅ Khoảng cách dưới */
+    margin-top: 10px; /* ✅ Cách tiêu đề */
+}
+
+.login-btn:hover {
+    background: #0056b3;
+}
+
+/*CẢM BIẾN */
+.sensor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px; 
+}
+
+/*THIẾT BỊ */
+.device-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+    max-width: 900px;
+    width: 100%;
+    margin-top: 20px;
+}
+.home-container {
+    display: flex;
+    min-height: 100vh; 
+    width: 100vw; 
+    background: #f4f4f4;
+    font-family: "Poppins", sans-serif;
+}
+
+/* 🌟 SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Sidebar */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+/* Danh sách menu */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+    color: white;
+}
+
+.menu li:hover, .menu .active {
+    background: #34495e;
+}
+
+/* 🌟 MAIN CONTENT */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    text-align: center;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* ✅ Căn giữa nội dung chính */
+}
+
+/* 🌟 CẢM BIẾN */
+.sensor-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.sensor-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.sensor-card .icon {
+    font-size: 28px;
+}
+
+.temperature {
+    background: linear-gradient(135deg, #ff6b6b, #ffa502);
+    color: white;
+}
+
+.humidity {
+    background: linear-gradient(135deg, #1e88e5, #64b5f6);
+    color: white;
+}
+
+/* 🌟 THIẾT BỊ - XẾP NGANG 4 Ô */
+.device-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ✅ Xếp 4 cột */
+    gap: 25px; /* ✅ Giãn cách giữa các ô */
+    max-width: 900px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* 🎛️ Card Thiết Bị */
+.device-card {
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+    font-weight: bold;
+    color: white;
+}
+
+/* 🔵 MÀU BẬT */
+.device-card.on {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+/* 🔴 MÀU TẮT */
+.device-card.off {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+/* Hover mượt hơn */
+.device-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Responsive - Xếp lại thành 2 hàng khi màn nhỏ hơn 900px */
+@media (max-width: 900px) {
+    .device-container {
+        grid-template-columns: repeat(2, 1fr); /* ✅ 2 cột khi màn hình nhỏ */
+    }
+}
+
+/* Màn rất nhỏ (<500px) thì xếp dọc từng ô */
+@media (max-width: 500px) {
+    .device-container {
+        grid-template-columns: repeat(1, 1fr); /* ✅ 1 cột khi màn hình nhỏ */
+    }
+}

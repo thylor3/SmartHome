@@ -1,0 +1,94 @@
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  height: 100vh;           
+  width: 100vw;             
+  background-color: #f4f7f6;
+  margin: 0;
+}
+
+/* 🔹 FORM LOGIN */
+.login-container {
+  width: 320px;  
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔹 TIÊU ĐỀ */
+.login-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* 🔹 INPUT */
+.input-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* 🔥 Căn chỉnh lại nhóm nút */
+.button-group {
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;  /
+  width: 100%;  
+  margin-top: 10px;
+}
+
+/* login */
+.login-btn {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.back-text {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;  
+  gap: 5px;  
+}
+
+.back-text:hover {
+  text-decoration: underline;
+}
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}

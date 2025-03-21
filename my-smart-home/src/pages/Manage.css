@@ -1,0 +1,228 @@
+/* 🎯 Tổng Layout */
+.manage-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f4f4;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🎨 Sidebar */
+.sidebar {
+  width: 260px;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🏆 Sidebar Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sidebar-header svg {
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar-header span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+/* 📌 Danh Sách Menu Sidebar */
+.menu {
+  flex-grow: 1;
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  color: white;
+}
+
+.menu li:hover,
+.menu li.active {
+  background: #34495e;
+  font-weight: bold;
+}
+
+/* ⚡ Sidebar Footer */
+.sidebar-footer {
+  text-align: center;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sidebar-footer span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #5b5a5a;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* 🌟 Nội dung chính */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: #fafafa;
+  text-align: center;
+}
+
+/* 🌟 QUẢN LÝ THIẾT BỊ - ĐẢM BẢO CĂN GIỮA */
+.device-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* ✅ Căn giữa tất cả nội dung */
+  gap: 40px;  /* ✅ Giãn cách hợp lý */
+  width: 100%;
+}
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* ✅ Luôn hiển thị 4 thiết bị trên 1 hàng */
+  gap: 20px;  /* ✅ Khoảng cách giữa các ô */
+  max-width: 800px;
+  width: 100%;
+  justify-content: center;
+}
+.sensor-grid {
+  display: flex; /* ✅ Dùng flex để tất cả cảm biến trên 1 hàng */
+  justify-content: center; /* ✅ Căn giữa theo chiều ngang */
+  flex-wrap: wrap; /* ✅ Xuống hàng nếu thiếu không gian */
+  gap: 20px; 
+  width: 100%;
+  max-width: 800px; /* ✅ Giữ cân đối với `device-grid` */
+}
+.sensor-card {
+  width: 180px;  /* ✅ Đảm bảo kích thước chuẩn với `device-card` */
+  padding: 15px;
+  background: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+}
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* ✅ Căn giữa toàn bộ nội dung */
+  justify-content: flex-start; 
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  background: #fafafa;
+}
+/* 📌 Chế độ Tài Khoản */
+.account-info {
+  max-width: 450px;
+  margin: auto;
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.account-info h2 {
+  font-size: 22px;
+}
+
+.info-view p {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Chỉnh sửa */
+.edit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #3498db;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  background: #2980b9;
+}
+
+/* Input Fields */
+.account-info input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(120deg, #4c7aaf, #2e717d);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s;
+  margin-top: 25px;
+}
+
+.save-btn:hover {
+  background: #1a2c7b;
+}
+
+/* 📌 Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .device-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sensor-grid {
+    flex-direction: column;
+  }
+
+  .sensor-card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
